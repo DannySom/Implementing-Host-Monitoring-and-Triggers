@@ -46,7 +46,7 @@ Now for the triggers. The first one, I titled "No data for 60 seconds." Then in 
 <br />
 
 <p>
-<img width="500" alt="Screenshot 2025-12-24 222123" src="https://github.com/user-attachments/assets/7ff47894-73a5-4bc0-a08f-5d04d925f003" />
+<img width="600" alt="Screenshot 2025-12-24 222123" src="https://github.com/user-attachments/assets/7ff47894-73a5-4bc0-a08f-5d04d925f003" />
 </p>
 <p>
 The second trigger I made
@@ -54,7 +54,7 @@ The second trigger I made
 <br />
 
 <p>
-<img width="500" alt="Screenshot 2025-12-24 222326" src="https://github.com/user-attachments/assets/9ed16979-4ac6-4e7a-8602-450c2db925b5" />
+<img width="600" alt="Screenshot 2025-12-24 222326" src="https://github.com/user-attachments/assets/9ed16979-4ac6-4e7a-8602-450c2db925b5" />
 </p>
 <p>
 The third trigger I created is CPU
