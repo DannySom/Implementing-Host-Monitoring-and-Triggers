@@ -90,18 +90,30 @@ Then, on Host-2 again, if I type in, "service zabbix-agent start," then the issu
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="Screenshot 2026-01-01 160652" src="https://github.com/user-attachments/assets/c8f3e190-3784-469a-8aca-1d55dbaf5530" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I added a couple more items. These will be used to create the graphs.
+  
+| name         | keys   | type                     | units  |
+|--------------|--------|--------------------------|--------|
+| Total Memory    | `vm.memory.size[total]`  | Numeric (unsigned)          | B      |
+| Free Memory  | `vm.memory.size[free]`    | Numeric (unsigned)`                  | B     |
+| CPU Utilization      | 	`system.cpu.util`  | Numeric (float)    | %   |
+| CPU Utilization (5)     | `system.cpu.util[,,avg5]`  | Numeric (float)    | %   |
+| CPU Utilization (15m)      | `system.cpu.util[,,avg15]`  | Numeric (float)    | %   |
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/7f638f2c-a418-43ab-b6c1-823a58267cde" /> </p> <img width="600" alt="Screenshot 2026-01-01 162731" src="https://github.com/user-attachments/assets/ee39967f-a65b-4dc9-8f67-02a29795f4ae" />
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now to create the graphs. I added two items which was the two items that I had just created for memory which was Total Memory and Free Memory.</p>
+I could choose to adjust the functions, lines, y axis side, and colors to make it easier to view but for now, I leave them at default.
 </p>
 <br />
 
