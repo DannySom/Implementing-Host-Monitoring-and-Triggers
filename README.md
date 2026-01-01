@@ -40,7 +40,11 @@ Then I manually created items for Host-2. Each item monitors a specific metric t
 |--------------|--------|--------------------------|--------|
 | Zabbix Agent Ping    | Zabbix Agent  | `agent.ping`          |       |
 | Free Space  | Zabbix Agent    | `vfs.fs.size[/,free]`                  | B     |
-| CPU      | float  | `system.cpu.util[,user]`    | %   |
+| CPU      | Zabbix Agent  | `system.cpu.util[,user]`    | %   |
+
+`agent.ping` verifies that the Zabbix agent is reachable and responding. If the agent stops responding, no monitoring data can be collected. </p>
+`vfs.fs.size[/,free]` monitors available disk space on the root filesystem. Low disk space is a common cause of system and application failures. </p>
+`system.cpu.util[,user]` monitors CPU utilization caused by user processes. High user CPU usage can indicate overloaded applications which consumes a lot of resources.</p>
 
 </p>
 <br />
@@ -49,7 +53,7 @@ Then I manually created items for Host-2. Each item monitors a specific metric t
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/b24d23da-4f87-42e2-8679-7f6125db854f" /> <img width="400" alt="Screenshot 2025-12-24 221737" src="https://github.com/user-attachments/assets/3e83fbd9-b9dd-4e7a-bad3-e7dc7c604204" />
 </p>
 <p>
-Now for the triggers. The first one, I titled "No data for 60 seconds." Then in expression, I selected Zabbix Agent Ping which was the item I created previously. For function I chose No data received during a period of time then, in last of time, I added 60 seconds and result equals to 1. So if there is no data coming from Host-2 for 60 seconds, it will equal to 1 therfore switching the trigger which will then send an alert.
+Now for the triggers. The first one, I titled "No data for 60 seconds." Then in expression, I selected Zabbix Agent Ping which was the item I created previously. The expression I put was "nodata(/host/agent.ping,60)=1." This fires if Zabbix hasn’t received a ping from the agent in 60 seconds. If this triggers, it could indicate the host is down, the network is unreachable, or the agent has failed. Without this trigger, I might not notice other metrics stop reporting.
 </p>
 <br />
 
@@ -57,7 +61,7 @@ Now for the triggers. The first one, I titled "No data for 60 seconds." Then in 
 <img width="600" alt="Screenshot 2025-12-24 222123" src="https://github.com/user-attachments/assets/7ff47894-73a5-4bc0-a08f-5d04d925f003" />
 </p>
 <p>
-The second trigger I made
+The second trigger I made is for Disk Space. The expression I put was "last(/host/vfs.fs.size[/,free]) < 5000000000." This fires when free disk space on / drops below 5 GB. Disk-full conditions can crash services or cause application errors.
 </p>
 <br />
 
@@ -65,7 +69,7 @@ The second trigger I made
 <img width="600" alt="Screenshot 2025-12-24 222326" src="https://github.com/user-attachments/assets/9ed16979-4ac6-4e7a-8602-450c2db925b5" />
 </p>
 <p>
-The third trigger I created is CPU
+The third trigger I created is for CPU usage. The expression I put was "avg(/host/system.cpu.util[,user],2m) > 75." This fires if average CPU usage by user processes exceeds 75% over 2 minutes. High CPU can indicate overloaded applications.
 </p>
 <br />
 
