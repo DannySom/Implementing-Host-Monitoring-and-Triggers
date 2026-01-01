@@ -29,11 +29,19 @@ Each of these hosts that I created has many items and those items were configure
 <br />
 
 <p>
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/21e13126-a956-4136-8a78-3ac338eeb1dd" /> <img width="400" alt="image" src="https://github.com/user-attachments/assets/1392e59c-7ff0-4f13-a9b1-9f1477971590" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/21e13126-a956-4136-8a78-3ac338eeb1dd" /> 
 
 </p>
 <p>
-Then I manually created items for Host-2.
+Then I manually created items for Host-2. Each item monitors a specific metric that reflects system health. Triggers cannot exist without items, because triggers evaluate item data.
+
+
+| name         | type   | keys                     | units  |
+|--------------|--------|--------------------------|--------|
+| Zabbix Agent Ping    | Zabbix Agent  | `agent.ping`          |       |
+| Free Space  | Zabbix Agent    | `vfs.fs.size[/,free]`                  | B     |
+| CPU      | float  | `system.cpu.util[,user]`    | %   |
+
 </p>
 <br />
 
