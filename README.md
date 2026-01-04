@@ -84,7 +84,7 @@ The third trigger I created is for CPU usage. The expression I put was "avg(/hos
 
 </p>
 <p>
-Now I'm going to test the dashboard to see if Zabbix server will give me a response if a host . I went into Host-2, and typed in the command `service zabbix-agent stop.` </p>
+Now I'm going to test the dashboard to see if Zabbix server will give me a response if an agent goes down. I went into Host-2, and typed in the command `service zabbix-agent stop.` </p>
 Once the agent was stopped, Zabbix detected the issue and displayed a new problem under Monitoring → Problems, classified with a Disaster severity level. The issue was also reflected in Monitoring → Hosts, where Host-2 showed a red availability indicator, signaling a problem state. </p> The error message states "Get value from agent failed: Cannot establish TCP connection to [[10.120.0.3]:10050]: [111] Connection refused"</p>
 This error confirmed that the network is Ok, the Host is up, but the Agent is down. If the host was actually down, then the error message would state that the host is unreachable and couldn't ping host-1 but we could still ping the Host </p>
 If I also click update problem, I could put a note in there so if anybody else is monitoring Zabbix, they will see the information provided on the problem. </p>
