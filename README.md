@@ -3,7 +3,13 @@
 </p>
 
 <h1>Zabbix Monitoring Deployment</h1>
-Zabbix is an open-source enterprise monitoring platform used by organizations to track the health, performance, and availability of their IT infrastructure. It provides real-time visibility across servers, virtual machines, networks, applications, and cloud environments — all from a single centralized dashboard. This demonstration will showcase a small monitoring environment using Zabbix to installing and configuring monitoring agents, setting up triggers, creating dashboards, receiving alerts, and responding to simulated incidents. <br />
+In this repository, I configured custom Zabbix items, triggers, and graphs to monitor system performance and service availability across a network.
+
+- Items were created to collect key metrics such as CPU utilization, memory usage, disk space, network latency, and service status using the Zabbix Agent, SNMP, and ICMP checks.
+
+- Triggers were configured to evaluate collected data and detect abnormal conditions, such as high resource utilization, host unavailability, or service downtime.
+
+- Graphs were designed to visualize performance trends over time, allowing for quick identification of spikes, degradation, and capacity concerns. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -74,18 +80,22 @@ The third trigger I created is for CPU usage. The expression I put was "avg(/hos
 <br />
 
 <p>
-<img width="400" height="115" alt="image" src="https://github.com/user-attachments/assets/db69814c-5291-459a-95d9-a4c29ea822a3" /> <img width="400" alt="Screenshot 2025-12-24 224024" src="https://github.com/user-attachments/assets/bf8c8b45-82e0-455d-96b7-bc1dde1b59e4" />
+<img width="400" height="115" alt="image" src="https://github.com/user-attachments/assets/db69814c-5291-459a-95d9-a4c29ea822a3" /> <img width="450" alt="image" src="https://github.com/user-attachments/assets/39e292ce-f896-471b-8883-21b9bb6e4a93" />
 </p>
 <p>
-Now I'm going to test the triggers. If I go into Host-2, and type in the command "service zabbix-agent stop," then go to Monitoring → Problems, there will be a new problem show on Host-2 with a Disaster Severity level. This will also appear in Monitoring → Hosts with a yellow icon under availability saying there's a problem with Host-2. If I also click update problem, I could put a note in there so if anybody else is monitoring Zabbix, they will see the information provided on the problem.
+Now I'm going to test the triggers. If I go into Host-2, and type in the command `service zabbix-agent stop.` </p>
+Once the agent was stopped, Zabbix detected the issue and displayed a new problem under Monitoring → Problems, classified with a Disaster severity level. The issue was also reflected in Monitoring → Hosts, where Host-2 showed a red availability indicator, signaling a problem state. </p>
+If I also click update problem, I could put a note in there so if anybody else is monitoring Zabbix, they will see the information provided on the problem. </p>
 </p>
 <br />
 
 <p>
-<img width="400" alt="image" src="https://github.com/user-attachments/assets/bcf23f45-7b30-439c-a3eb-946f2272500b" /> <img width="400" alt="Screenshot 2025-12-24 224158" src="https://github.com/user-attachments/assets/dfb7cf2f-90fe-4848-9275-501506b9481b" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/bcf23f45-7b30-439c-a3eb-946f2272500b" /> <img width="450" alt="image" src="https://github.com/user-attachments/assets/02cf0bdf-ea17-4234-8c3f-4d193fd27534" />
+
 </p>
 <p>
-Then, on Host-2 again, if I type in, "service zabbix-agent start," then the issue will then quickly resolve itself.
+To resolve the incident, I restarted the Zabbix Agent service on Host-2 by typing `service zabbix-agent start` . Zabbix then automatically detected recovery, cleared the alert, and restored the host to a normal operational state. </p>
+This test confirmed that triggers were correctly configured to detect service outages, generate alerts, and resolve incidents once the underlying issue was corrected.
 </p>
 <br />
 
