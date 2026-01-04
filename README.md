@@ -5,7 +5,7 @@
 <h1>Zabbix Monitoring Deployment</h1>
 In this repository, I configured custom Zabbix items, triggers, and graphs to monitor system performance and service availability across a network.
 
-- Items were created to collect key metrics such as CPU utilization, memory usage, disk space, network latency, and service status using the Zabbix Agent, SNMP, and ICMP checks.
+- Items were created to collect key metrics such as CPU utilization, memory usage, disk space, and service status using the Zabbix Agent, SNMP, and ICMP checks.
 
 - Triggers were configured to evaluate collected data and detect abnormal conditions, such as high resource utilization, host unavailability, or service downtime.
 
