@@ -80,7 +80,8 @@ The third trigger I created is for CPU usage. The expression I put was "avg(/hos
 <br />
 
 <p>
-<img width="400" height="115" alt="image" src="https://github.com/user-attachments/assets/db69814c-5291-459a-95d9-a4c29ea822a3" /> <img width="450" alt="image" src="https://github.com/user-attachments/assets/39e292ce-f896-471b-8883-21b9bb6e4a93" /> <img width="400" alt="image" src="https://github.com/user-attachments/assets/32e12f4c-6160-4106-8e40-0cdfd5382b7c" />
+<img width="400" height="115" alt="image" src="https://github.com/user-attachments/assets/db69814c-5291-459a-95d9-a4c29ea822a3" /> <img width="450" alt="image" src="https://github.com/user-attachments/assets/39e292ce-f896-471b-8883-21b9bb6e4a93" /> <img width="400" alt="image" src="https://github.com/user-attachments/assets/32e12f4c-6160-4106-8e40-0cdfd5382b7c" /> <img width="450" alt="image" src="https://github.com/user-attachments/assets/a86ff69b-6836-4e9b-8d70-778374a4afc4" />
+
 
 </p>
 <p>
