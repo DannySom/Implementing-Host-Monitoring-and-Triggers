@@ -76,6 +76,7 @@ The second trigger I made is for Disk Space. The expression I put was "last(/hos
 </p>
 <p>
 The third trigger I created is for CPU usage. The expression I put was "avg(/host/system.cpu.util[,user],2m) > 75." This fires if average CPU usage by user processes exceeds 75% over 2 minutes. High CPU can indicate overloaded applications.
+</p> I could put 5 minutes in real world situations, but since this is a small lab environment, I picked 2 for faster detection.
 </p>
 <br />
 
@@ -131,10 +132,10 @@ I could choose to adjust the functions, lines, y axis side, and colors to make i
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/39ec277c-90dd-489b-816a-8dae4d0e920b" />
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+rgvjngirugnggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg
 </p>
 <br />
 
